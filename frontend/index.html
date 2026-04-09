@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Breast Cancer Predictor</h1>
+            <p>Advanced diagnostic tool powered by Machine Learning</p>
+        </header>
+
+        <section class="controls">
+            <button id="btn-malignant" class="btn-sample">Load Sample Malignant</button>
+            <button id="btn-benign" class="btn-sample">Load Sample Benign</button>
+            <button id="btn-clear" class="btn-clear">Clear Data</button>
+        </section>
+
+        <div class="main-content">
+            <div class="form-panel glass-panel">
+                <h2>Tumor Features</h2>
+                <form id="prediction-form">
+                    <div id="features-grid" class="features-grid">
+                        <!-- 30 Inputs will be injected here via JavaScript -->
+                    </div>
+                    <button type="submit" class="btn-primary" id="btn-predict">Analyze Tumor</button>
+                </form>
+            </div>
+
+            <div class="result-panel glass-panel" id="result-panel">
+                <h2>Diagnostic Result</h2>
+                <div class="result-display" id="result-display">
+                    <div class="status-icon" id="status-icon">🔍</div>
+                    <h3 id="result-text">Awaiting Input...</h3>
+                    <p id="result-desc">Submit 30 features from a biopsy to run the ML model.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
